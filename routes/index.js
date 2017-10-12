@@ -1,16 +1,16 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var User = require('../models/subscribers.model');
+// var User = require('../models/subscribers.model');
 var Quote = require('../models/quote.model');
 var db = process.env.MOGODB_URI || 'mongodb://localhost/big_site';
 mongoose.connect(db);
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+/*router.get('/', function (req, res, next) {
     res.render('index', {title: 'Adam is Awesome'});
-});
-
+});*/
+/*
 router.post('/subscribe', function (req, res, next) {
     var newUser = new User();
     newUser.firstname = req.body.firstname;
@@ -29,6 +29,7 @@ router.post('/subscribe', function (req, res, next) {
 
     });
 });
+*/
 
 router.post('/add-quote', function (req, res, next) {
     var newQuote = new Quote();
