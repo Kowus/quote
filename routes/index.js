@@ -52,6 +52,6 @@ router.get('/get-quotes', function (req, res, next) {
         if(err) return res.send(err);
         res.json(quotes)
     })
-})
+});
 
 module.exports = router;
