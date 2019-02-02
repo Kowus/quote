@@ -9,9 +9,12 @@ var index = require('./routes/index');
 var mongoose = require('mongoose');
 var db = process.env.MONGODB_URI || 'mongodb://localhost/big_site';
 mongoose.connect(db);
+var cors = require('cors');
 var app = express();
 
+app.use(cors());
 // Add headers
+/*
 app.use(function(req, res, next) {
   // Website you wish to allow to connect
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -35,7 +38,7 @@ app.use(function(req, res, next) {
   // Pass to next layer of middleware
   next();
 });
-
+*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
