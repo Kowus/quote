@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose');
+
 // var User = require('../models/subscribers.model');
 var Quote = require('../models/quote.model');
-var db = process.env.MOGODB_URI || 'mongodb://localhost/big_site';
-mongoose.connect(db);
+
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
