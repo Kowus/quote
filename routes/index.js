@@ -7,9 +7,10 @@ var db = process.env.MOGODB_URI || 'mongodb://localhost/big_site';
 mongoose.connect(db);
 
 /* GET home page. */
-/*router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Adam is Awesome'});
-});*/
+router.get('/', function (req, res, next) {
+    // res.render('index', {title: 'Adam is Awesome'});
+    res.send("If it is good enough for you, it is gold enough for me");
+});
 /*
 router.post('/subscribe', function (req, res, next) {
     var newUser = new User();
