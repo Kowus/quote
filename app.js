@@ -74,7 +74,7 @@ app.use(function(err, req, res, next) {
 mongoose.connection.on('connected', function() {
   console.log('mongoose default connection connected');
 });
-mongoose.connection.on('error', function() {
+mongoose.connection.on('error', function(err) {
   console.log('mongoose default connection error: ' + err);
 });
 module.exports = app;
